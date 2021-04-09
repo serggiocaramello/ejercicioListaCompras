@@ -1,10 +1,12 @@
 <template>
-  <b-row class="mt-3 pt-3 border-top border-secondary form-row">
+  <b-row
+    class="mt-3 pt-3 border-top border-secondary form-row d-flex align-items-center"
+  >
     <b-col cols="7">
       <b-button
         size="sm"
         variant="danger"
-        class="mb-2 form-row-delete-btn"
+        class="form-row-delete-btn"
         @click="deleteEl(el)"
       >
         <b-icon icon="trash-fill" aria-label="Help"></b-icon>
@@ -21,12 +23,12 @@
         switch
       ></b-form-checkbox>
       <template v-if="el.isPaid">
-        <b-button size="sm" class="mb-2" variant="success">
+        <b-button size="sm" variant="success">
           <b-icon icon="check" aria-label="Help"></b-icon>
         </b-button>
       </template>
       <template v-else>
-        <b-button size="sm" class="mb-2" variant="outline-secondary">
+        <b-button size="sm" variant="outline-secondary">
           <b-icon icon="x" aria-label="Help"></b-icon>
         </b-button>
       </template>
