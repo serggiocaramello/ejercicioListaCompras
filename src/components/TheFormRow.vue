@@ -17,7 +17,7 @@
         class="form-switch-is-paid"
         v-model="el.isPaid"
         name="check-button"
-        @click="toggleAndUpdate(el)"
+        @input="toggleAndUpdate(el)"
         switch
       ></b-form-checkbox>
       <template v-if="el.isPaid">
