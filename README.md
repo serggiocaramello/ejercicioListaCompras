@@ -4,8 +4,4 @@
 
 ## tecnologias:
 
-### vue.js 2, vuex, boottrap-vue, jest.
-
-```
-
-```
+### Vue.js 2, Vuex, Boottrap-vue, Jest.
