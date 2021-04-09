@@ -31,7 +31,6 @@
         </b-button>
       </template>
     </b-col>
-    <pre>{{ el }}</pre>
   </b-row>
 </template>
 
