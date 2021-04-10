@@ -1,15 +1,17 @@
 <template>
-  <b-row class="mt-3">
+  <b-row class="my-4">
     <b-col cols="7">
       <b-form-input
         class="form-product-name"
         v-model="currProduct.name"
+        placeholder="Nombre del producto"
       ></b-form-input>
     </b-col>
     <b-col cols="3">
       <b-form-input
         class="form-product-price"
         v-model.number="currProduct.price"
+        placeholder="Precio del producto"
       ></b-form-input>
     </b-col>
     <b-col cols="2">

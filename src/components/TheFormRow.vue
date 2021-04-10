@@ -23,14 +23,14 @@
         switch
       ></b-form-checkbox>
       <template v-if="el.isPaid">
-        <b-button size="sm" variant="success">
+        <div class="btn-ticket" size="sm" variant="success">
           <b-icon icon="check" aria-label="Help"></b-icon>
-        </b-button>
+        </div>
       </template>
       <template v-else>
-        <b-button size="sm" variant="outline-secondary">
+        <div class="btn-x" size="sm" variant="outline-secondary">
           <b-icon icon="x" aria-label="Help"></b-icon>
-        </b-button>
+        </div>
       </template>
     </b-col>
   </b-row>
@@ -55,4 +55,24 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.btn-ticket,
+.btn-x {
+  padding: 0.5em;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 0.25em;
+}
+
+.btn-x {
+  border: 2px solid #6c757d;
+}
+
+.btn-ticket {
+  background-color: #28a745;
+  color: #fff;
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <b-container>
-    <TheFormHeader />
     <TheFormInputs />
+    <TheFormHeader />
     <TheFormRow v-for="product in products" :key="product.name" :el="product" />
     <TheFormFooter />
   </b-container>
