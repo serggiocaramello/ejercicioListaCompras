@@ -24,14 +24,16 @@
         >
       </b-col>
     </b-row>
-    <b-row v-if="error">
-      <b-col cols="12">
-        <span
-          class="mt-2 rounded text-center d-block w-100 p-2 error bg-danger text-white"
-          >{{ error }}</span
-        >
-      </b-col>
-    </b-row>
+    <transition name="fade">
+      <b-row v-if="error">
+        <b-col cols="12">
+          <span
+            class="mt-2 rounded text-center d-block w-100 p-2 error bg-danger text-white"
+            >{{ error }}</span
+          >
+        </b-col>
+      </b-row>
+    </transition>
   </div>
 </template>
 
@@ -76,5 +78,14 @@ export default {
   @media screen and (min-width: 768px) {
     width: 100%;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
