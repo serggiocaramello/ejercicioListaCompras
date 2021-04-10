@@ -1,20 +1,22 @@
 <template>
   <b-row
-    class="mt-3 pt-3 border-top border-secondary form-row d-flex align-items-center"
+    class="mt-3 pt-3 form-row--container border-top border-secondary d-flex align-items-center"
   >
     <b-col cols="7">
-      <b-button
-        size="sm"
-        variant="danger"
-        class="form-row-delete-btn"
-        @click="deleteEl(el)"
-      >
-        <b-icon icon="trash-fill" aria-label="Help"></b-icon>
-      </b-button>
-      <span class="ml-3">{{ el.name }}</span>
+      <div class="d-flex align-items-center">
+        <b-button
+          size="sm"
+          variant="danger"
+          class="form-row-delete-btn"
+          @click="deleteEl(el)"
+        >
+          <b-icon icon="trash-fill" aria-label="Help"></b-icon>
+        </b-button>
+        <span class="ml-3">{{ el.name }}</span>
+      </div>
     </b-col>
-    <b-col cols="3">{{ el.price }}</b-col>
-    <b-col cols="2" class="d-flex justify-content-end">
+    <b-col cols="2">{{ el.price }}</b-col>
+    <b-col cols="3" class="d-flex justify-content-end">
       <b-form-checkbox
         class="form-switch-is-paid"
         v-model="el.isPaid"
@@ -23,12 +25,16 @@
         switch
       ></b-form-checkbox>
       <template v-if="el.isPaid">
-        <div class="btn-ticket" size="sm" variant="success">
+        <div class="btn-ticket d-none d-md-flex" size="sm" variant="success">
           <b-icon icon="check" aria-label="Help"></b-icon>
         </div>
       </template>
       <template v-else>
-        <div class="btn-x" size="sm" variant="outline-secondary">
+        <div
+          class="btn-x d-none d-md-flex"
+          size="sm"
+          variant="outline-secondary"
+        >
           <b-icon icon="x" aria-label="Help"></b-icon>
         </div>
       </template>

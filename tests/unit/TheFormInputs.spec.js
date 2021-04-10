@@ -65,4 +65,17 @@ describe("Componente TheFormInputs", () => {
       isPaid: false,
     });
   });
+
+  it("Checking products property after clicking button when .form-input-price value is not a number", () => {
+    const wrapper = mount(TheFormInputs, { store, localVue });
+
+    wrapper.find(".form-product-name").setValue("Servicio");
+    wrapper.find(".form-product-price").setValue("something");
+    wrapper.find(".form-product-add-button").trigger("click");
+
+    expect(
+      store.state.products.filter((product) => product.isPaid === "something")
+        .length
+    ).toEqual(0);
+  });
 });

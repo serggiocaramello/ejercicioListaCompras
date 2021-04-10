@@ -29,7 +29,7 @@ describe("Componente TheFormRow", () => {
       propsData: { el: store.state.products[0] },
     });
 
-    expect(wrapper.find(".form-row").exists()).toBe(true);
+    expect(wrapper.find(".form-row--container").exists()).toBe(true);
   });
 
   it("Checking products store property when a form-row is deleted", async () => {
